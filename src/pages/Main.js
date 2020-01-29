@@ -10,6 +10,7 @@ export default function Main(props) {
     const [currentRegion, setCurrentRegion] = useState(null);
     const [techs, setTechs] = useState('')
 
+
     async function loadDevs() {
         const { latitude, longitude } = currentRegion;
 
@@ -105,7 +106,7 @@ export default function Main(props) {
                     onChangeText={techs => setTechs(techs)}
                 />
                 <TouchableOpacity onPress={() => loadDevs()} style={styles.loadButton}>
-                    <Text style={{ fontSize: 11, color: '#fff'}}>Buscar</Text>
+                    <Image style={{ width: 16, height: 16 }} source={require('../assets/lupa.png')} />
                 </TouchableOpacity>
             </View>
         </>
